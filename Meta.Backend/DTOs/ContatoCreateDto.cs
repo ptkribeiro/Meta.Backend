@@ -11,7 +11,7 @@ namespace Meta.Backend.DTOs
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
         [MaxLength(20)]
-        [CanalValidation]
+        [CreateCanalValidation]
         public string Canal { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]

@@ -14,13 +14,13 @@ namespace Meta.Backend.DTOs
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
-        [CanalValidation]
-        public string canal { get; set; }
+        [UpdateCanalValidation]
+        public string Canal { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
         [MaxLength(250, ErrorMessage = "Este campo deve conter no máximo 250 caracteres")]
-        public string valor { get; set; }
+        public string Valor { get; set; }
 
-        public string obs { get; set; }
+        public string Obs { get; set; }
     }
 }

@@ -36,6 +36,8 @@ namespace Meta.Backend.Controllers
             var contatoItems = _repository.GetAllContatos();
             int total = contatoItems.Count();
             int pageCount = total > 0 ? (int)Math.Ceiling(total / (double)size) : 0;
+            if (pageCount <= page)
+                return NotFound();
 
             contatoItems = _repository.GetAllContatos().Skip(skip).Take(size);
             Response.Headers.Add("X-Page-PageNo", page.ToString());
